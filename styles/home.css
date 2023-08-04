@@ -1,0 +1,177 @@
+/* Generic */
+body {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Nav */
+.navbar {
+  background: rgba(0, 148, 136, 0.13);
+}
+
+.navbar-toggler {
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.menu {
+  width: 20px;
+  height: 20px;
+  display: inline;
+}
+
+.hide-menu {
+  display: none;
+}
+
+.open-menu {
+  display: inline;
+}
+
+.close-menu {
+  display: none;
+}
+
+/* Hero section */
+.hero-section {
+  margin-top: 3%;
+}
+
+.hero-header {
+  margin: 50px 0 20px 0;
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 60px;
+}
+
+.hero-paragraph {
+  opacity: 0.6;
+  font-size: 20px;
+}
+
+.get-started {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  background-color: #1b1b1b;
+  color: #fff;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #1b1b1b;
+  margin-left: 10px;
+}
+
+.journey {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.hero-img {
+  width: 400px;
+  height: 400px;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+
+/* News Letter */
+.newsletter {
+  margin-top: 5%;
+  background: rgba(0, 148, 136, 0.13);
+  padding: 50px 0;
+}
+
+.newsletter-intro {
+  text-align: center;
+}
+
+.newsletter-header {
+  font-weight: 900;
+}
+
+.about-newsletter {
+  opacity: 0.6;
+  font-size: 18px;
+}
+
+.subscribe button {
+  margin-top: 10px;
+  padding: 10px 30px;
+  border: 2px solid #fff;
+  color: #1b1b1b;
+  background-color: #fff;
+}
+
+input[type="email"] {
+  width: 30%;
+  padding: 5px;
+}
+
+input[type="email"]:focus {
+  outline: none;
+}
+
+.subscribe button:hover {
+  margin-top: 10px;
+  padding: 10px 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: all 2s ease-in;
+  background-color: #1b1b1b;
+}
+
+/* Podcast */
+.podcast-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.podcast-col2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.podcast-header {
+  font-weight: 900;
+  font-size: 35px;
+}
+
+.podcast-paragraph {
+  opacity: 0.6;
+  font-size: 18px;
+}
+
+.explore-podcasts {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  background-color: #1b1b1b;
+  color: #fff;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}

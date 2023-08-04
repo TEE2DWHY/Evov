@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Title -->
+    <title>E-Vov - Evolving Lifestyles Through Education</title>
+  </head>
+  <body>
+    <!-- GOTCHA!!!! -->
+    <notice style="display: none">
+      Why are you checking my source code tho? (Lol). Its a basic website. SEE
+      MORE PROJECTS HERE:
+      <a href="https://github.com/TEE2DWHY">My Github Here</a>
+    </notice>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">E-Vov</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span>
+            <img class="menu" src="./assets/menu.png" alt="menu" />
+            <span class="close-menu">X</span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#newsletter">Newsletter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Podcasts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero section -->
+    <section id="hero" data-aos="fade-up">
+      <div class="hero-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h1 class="hero-header">
+                Elevate Your Lifestyle Through Education.
+              </h1>
+              <p class="hero-paragraph">
+                Explore our curated educational content, engage with our
+                insightful newsletters, and empower yourself with transformative
+                podcasts.
+              </p>
+              <button class="get-started">Get Started</button>
+              <a class="learn-more" href="#"> Learn More </a>
+              <p class="journey">Kickstart your journey to <b>greatness</b>.</p>
+            </div>
+            <div class="col-lg-6">
+              <img
+                class="img-fluid hero-img"
+                src="./assets/evov.gif"
+                alt="hero-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter -->
+    <section id="newsletter">
+      <div class="newsletter">
+        <div class="container">
+          <div class="newsletter-intro">
+            <h1 class="newsletter-header">Subscribe to Our Newsletter</h1>
+            <p class="about-newsletter">
+              Stay updated with the latest trends, insights, and tips for
+              evolving your lifestyle through education.
+            </p>
+            <form method="post">
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="johndoe@gmail.com"
+                  required
+                />
+              </div>
+              <div class="subscribe">
+                <button type="submit">Subscribe</button>
+              </div>
+              <span class="error"></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PodCast -->
+    <section id="podcast">
+      <div class="container podcast">
+        <div class="podcast-row">
+          <div class="podcast-col1" data-aos="fade-right">
+            <img
+              class="img-fluid podcast-img"
+              src="./assets/Podcast.gif"
+              alt="podcast-img"
+            />
+          </div>
+          <div class="podcast-col2" data-aos="fade-left">
+            <h1 class="podcast-header">
+              Elevate Your Mind with Enlightening Podcasts.
+            </h1>
+            <p class="podcast-paragraph">
+              Immerse yourself in a world of knowledge and inspiration. Our
+              curated collection of podcasts covers a wide range of topics,
+              helping you grow and evolve on your journey.
+            </p>
+            <button class="explore-podcasts">Explore Podcasts</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+    <!-- AOS -->
+    <script src="./js/aos.js"></script>
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+  </body>
+</html>
