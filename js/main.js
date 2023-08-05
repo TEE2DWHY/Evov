@@ -14,6 +14,7 @@ closeMenu.addEventListener("click", () => {
 // Manage form submission
 const form = document.querySelector("form");
 const formErr = document.querySelector(".error");
+const success = document.querySelector(".success");
 
 form.addEventListener("submit", async (e) => {
   const apiUrl = "http://localhost:3000/api/v1/register";
@@ -26,12 +27,20 @@ form.addEventListener("submit", async (e) => {
   // Handle Post Request using axios.
   try {
     const res = await axios.post(apiUrl, formData);
-    console.log(`Mail: ${email} is successfully subscribed.`);
+    success.innerHTML = `${email} is subscribed!.`;
+    setTimeout(() => {
+      success.innerHTML = "";
+    }, 3000);
     emailInput.value = "";
   } catch (err) {
     formErr.innerHTML = `${err.response.data.msg}`;
     setTimeout(() => {
       formErr.innerHTML = "";
-    }, 2000);
+    }, 3000);
   }
 });
+
+// Render year dynamically
+const year = document.getElementById("year");
+const currentYear = new Date().getFullYear();
+year.innerHTML = currentYear;

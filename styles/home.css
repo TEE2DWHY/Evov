@@ -140,6 +140,20 @@ input[type="email"]:focus {
   background-color: #1b1b1b;
 }
 
+.success {
+  color: #1b1b1b;
+  margin-top: 20px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.error {
+  color: red;
+  margin-top: 20px;
+  font-size: 14px;
+  font-style: italic;
+}
+
 /* Podcast */
 .podcast-row {
   display: flex;
