@@ -140,6 +140,18 @@ input[type="email"]:focus {
   background-color: #1b1b1b;
 }
 
+.hide-button-text {
+  display: none;
+}
+
+.spinner-border {
+  display: none;
+}
+
+.show-spinner {
+  display: block;
+}
+
 .success {
   color: #1b1b1b;
   margin-top: 20px;

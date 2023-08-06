@@ -14,6 +14,8 @@ closeMenu.addEventListener("click", () => {
 // Manage form submission
 const form = document.querySelector("form");
 const formErr = document.querySelector(".error");
+const spinner = document.querySelector(".spinner-border");
+const buttonText = document.querySelector(".button-text");
 const success = document.querySelector(".success");
 
 form.addEventListener("submit", async (e) => {
@@ -24,6 +26,8 @@ form.addEventListener("submit", async (e) => {
     email: email,
   };
   e.preventDefault();
+  buttonText.classList.toggle("hide-button-text");
+  spinner.classList.toggle("show-spinner");
   // Handle Post Request using axios.
   try {
     const res = await axios.post(apiUrl, formData);
@@ -31,12 +35,16 @@ form.addEventListener("submit", async (e) => {
     setTimeout(() => {
       success.innerHTML = "";
     }, 3000);
+    buttonText.classList.toggle("hide-button-text");
+    spinner.classList.toggle("show-spinner");
     emailInput.value = "";
   } catch (err) {
     formErr.innerHTML = `${err.response.data.msg}`;
     setTimeout(() => {
       formErr.innerHTML = "";
     }, 3000);
+    buttonText.classList.toggle("hide-button-text");
+    spinner.classList.toggle("show-spinner");
   }
 });
 
