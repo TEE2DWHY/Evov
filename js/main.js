@@ -19,7 +19,7 @@ const buttonText = document.querySelector(".button-text");
 const success = document.querySelector(".success");
 
 form.addEventListener("submit", async (e) => {
-  const apiUrl = "https://evov.onrender.com/api/v1";
+  const apiUrl = "https://evov.onrender.com/api/v1/register";
   const emailInput = document.getElementById("email");
   const email = emailInput.value;
   const formData = {
