@@ -1,20 +1,19 @@
 @media (max-width: 1200px) {
-  .podcast-row {
-    flex-direction: column;
-  }
-
-  .hero-header {
-    /* font-size: 50px; */
-  }
-
+  /* Hero Section */
   .hero-img {
     width: 100%;
     object-fit: cover;
   }
 
+  /* NewsLetter */
   input[type="email"] {
     width: 70%;
     padding: 10px 20px;
+  }
+
+  /* Podcast */
+  .podcast-row {
+    flex-direction: column;
   }
 
   .podcast-col2 {
