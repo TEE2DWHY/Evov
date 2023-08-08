@@ -1,6 +1,9 @@
 /* Generic */
 body {
   margin: 0;
+  padding: 0;
+  /* background-color: #1b1b1b; */
+  /* color: #fff; */
 }
 
 button {
@@ -41,6 +44,19 @@ button {
 
 .close-menu {
   display: none;
+}
+
+/* Circle */
+.circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 5px solid rgba(0, 148, 136, 0.13);
+  border-radius: 50%;
+  pointer-events: none; /* Allow mouse interactions to pass through the circle */
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* Hero section */
@@ -120,8 +136,6 @@ button {
   border: 2px solid #fff;
   color: #1b1b1b;
   background-color: #fff;
-  cursor: not-allowed;
-  opacity: 0.6;
 }
 
 input[type="email"] {
@@ -203,3 +217,5 @@ input[type="email"]:focus {
   font-size: 18px;
   font-weight: bold;
 }
+
+/* About-Us */

@@ -19,7 +19,7 @@ const buttonText = document.querySelector(".button-text");
 const success = document.querySelector(".success");
 
 form.addEventListener("submit", async (e) => {
-  const apiUrl = "http://localhost:3000/api/v1/register";
+  const apiUrl = "https://evov.onrender.com";
   const emailInput = document.getElementById("email");
   const email = emailInput.value;
   const formData = {
@@ -52,3 +52,14 @@ form.addEventListener("submit", async (e) => {
 const year = document.getElementById("year");
 const currentYear = new Date().getFullYear();
 year.innerHTML = currentYear;
+
+// add circle to cursor movement
+const circle = document.querySelector(".circle");
+document.addEventListener("mousemove", (e) => {
+  circle.style.left = `${e.clientX}px`;
+  circle.style.top = `${e.clientY}px`;
+  circle.style.opacity = 1;
+});
+document.addEventListener("mouseleave", () => {
+  circle.style.opacity = 0;
+});
