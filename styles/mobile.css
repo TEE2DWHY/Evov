@@ -1,4 +1,8 @@
 @media (max-width: 1200px) {
+  /* Global */
+  body {
+    overflow-x: hidden;
+  }
   /* Hero Section */
   .hero-img {
     width: 100%;
