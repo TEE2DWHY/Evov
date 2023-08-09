@@ -1,0 +1,21 @@
+.email-img {
+  display: block;
+  margin: auto;
+}
+
+.login {
+  width: 30%;
+}
+
+.login:hover {
+  color: #1b1b1b;
+  background-color: #fff;
+  transition: all 2s ease-in;
+}
+
+@media (max-width: 1200px) {
+  .login {
+    width: 80%;
+    padding: 10px;
+  }
+}
