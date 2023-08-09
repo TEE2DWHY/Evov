@@ -1,3 +1,6 @@
+// Globals
+const baseUrl = "https://evov.onrender.com/";
+
 // Manage Navbar Toggle
 const menu = document.querySelector(".menu");
 const closeMenu = document.querySelector(".close-menu");
@@ -18,8 +21,9 @@ const spinner = document.querySelector(".spinner-border");
 const buttonText = document.querySelector(".button-text");
 const success = document.querySelector(".success");
 
+// send form post request
 form.addEventListener("submit", async (e) => {
-  const apiUrl = "https://evov.onrender.com/api/v1/register";
+  const apiUrl = `${baseUrl}/api/v1/register`;
   const emailInput = document.getElementById("email");
   const email = emailInput.value;
   const formData = {
@@ -47,6 +51,11 @@ form.addEventListener("submit", async (e) => {
     spinner.classList.toggle("show-spinner");
   }
 });
+
+// handle verify email rendering
+const apiUrl = `${baseUrl}/api/v1/verify-email`;
+const res = await axios.get(apiUrl);
+console.log(res.data);
 
 // Render year dynamically
 const year = document.getElementById("year");
