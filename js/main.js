@@ -20,6 +20,7 @@ const formErr = document.querySelector(".error");
 const spinner = document.querySelector(".spinner-border");
 const buttonText = document.querySelector(".button-text");
 const success = document.querySelector(".success");
+
 // Get Modal
 const modal = document.querySelector(".modal-container");
 
@@ -52,7 +53,7 @@ form.addEventListener("submit", async (e) => {
     formErr.innerHTML = `<span class="email-status">Status:</span> ${err.response.data.msg}`;
     setTimeout(() => {
       formErr.innerHTML = "";
-      modal.classList.toggle("show-modal");
+      modal.classList.remove("show-modal");
     }, 4000);
     buttonText.classList.toggle("hide-button-text");
     spinner.classList.toggle("show-spinner");
