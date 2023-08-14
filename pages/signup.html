@@ -21,12 +21,16 @@
   <body>
     <!-- Signup Container -->
     <div class="signup">
+      <!-- Form -->
       <form>
+        <!-- Create Account -->
         <h2 class="signup-header">Create An Account</h2>
         <div>
+          <!-- Full Name -->
           <div class="input-headers">Full Name</div>
           <input type="text" id="fullname" placeholder="fullname" required />
         </div>
+        <!-- Email -->
         <div>
           <div class="input-headers">Email</div>
           <input
@@ -36,6 +40,7 @@
             required
           />
         </div>
+        <!-- Password -->
         <div>
           <div class="input-headers">Password</div>
           <input
@@ -45,21 +50,26 @@
             required
           />
         </div>
+        <!-- Confirm Password -->
         <div>
           <div class="input-headers">Confirm Password</div>
           <input
             type="password"
-            id="password"
+            id="confirm-password"
             placeholder="confirm password"
             required
           />
         </div>
+        <!-- Login Button -->
         <button type="submit" class="signup-button" disabled>Sign Up</button>
+        <!-- Login -->
         <p class="login">
           Already have an account?
           <a href="./login.html"><span>Login.</span></a>
         </p>
       </form>
     </div>
+    <!-- JS -->
+    <script src="../js/signup.js" type="text/javascript"></script>
   </body>
 </html>
