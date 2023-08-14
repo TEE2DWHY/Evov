@@ -278,3 +278,8 @@ input[type="email"]:focus {
 }
 
 /* About-Us */
+
+/* Footer */
+#footer {
+  background-color: rgba(0, 148, 136, 0.13);
+}
