@@ -20,36 +20,49 @@ const formErr = document.querySelector(".error");
 const spinner = document.querySelector(".spinner-border");
 const buttonText = document.querySelector(".button-text");
 const success = document.querySelector(".success");
+// Get Modal
+const modal = document.querySelector(".modal-container");
 
 // send form post request
 form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  modal.classList.toggle("show-modal");
+  // Api Url
   const apiUrl = `${baseUrl}/api/v1/register`;
   const emailInput = document.getElementById("email");
   const email = emailInput.value;
   const formData = {
     email: email,
   };
-  e.preventDefault();
   buttonText.classList.toggle("hide-button-text");
   spinner.classList.toggle("show-spinner");
   // Handle Post Request using axios.
   try {
     const res = await axios.post(apiUrl, formData);
-    success.innerHTML = `${email} is subscribed!.`;
+    success.innerHTML =
+      "<span class=email-status>Status:</span> :email is subscribed!.";
     setTimeout(() => {
       success.innerHTML = "";
-    }, 3000);
+      modal.classList.toggle("show-modal");
+    }, 4000);
     buttonText.classList.toggle("hide-button-text");
     spinner.classList.toggle("show-spinner");
     emailInput.value = "";
   } catch (err) {
-    formErr.innerHTML = `${err.response.data.msg}`;
+    formErr.innerHTML = `<span class="email-status">Status:</span> ${err.response.data.msg}`;
     setTimeout(() => {
       formErr.innerHTML = "";
-    }, 3000);
+      modal.classList.toggle("show-modal");
+    }, 4000);
     buttonText.classList.toggle("hide-button-text");
     spinner.classList.toggle("show-spinner");
   }
+});
+
+// close modal
+const closeButton = document.querySelector(".close");
+closeButton.addEventListener("click", () => {
+  modal.classList.toggle("show-modal");
 });
 
 // Render year dynamically
