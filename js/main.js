@@ -27,7 +27,11 @@ const modal = document.querySelector(".modal-container");
 // send form post request
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  // Get podcast section
+  const podcast = document.getElementById("podcast");
   modal.classList.toggle("show-modal");
+  podcast.style.display = "none";
+
   // Api Url
   const apiUrl = `${baseUrl}/api/v1/register`;
   const emailInput = document.getElementById("email");
@@ -54,6 +58,7 @@ form.addEventListener("submit", async (e) => {
     setTimeout(() => {
       formErr.innerHTML = "";
       modal.classList.remove("show-modal");
+      podcast.style.display = "block";
     }, 4000);
     buttonText.classList.toggle("hide-button-text");
     spinner.classList.toggle("show-spinner");
