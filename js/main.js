@@ -1,5 +1,7 @@
 // Globals
 const baseUrl = "https://evov.onrender.com";
+// Get Modal
+const modal = document.querySelector(".modal-container");
 
 // Manage Navbar Toggle
 const menu = document.querySelector(".menu");
@@ -20,9 +22,6 @@ const formErr = document.querySelector(".error");
 const spinner = document.querySelector(".spinner-border");
 const buttonText = document.querySelector(".button-text");
 const success = document.querySelector(".success");
-
-// Get Modal
-const modal = document.querySelector(".modal-container");
 
 // send form post request
 form.addEventListener("submit", async (e) => {
