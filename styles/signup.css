@@ -171,7 +171,7 @@ input:focus {
 @media (max-width: 767px) {
   form {
     width: 100%;
-    padding: 20px 60px;
+    padding: 20px 70px;
   }
 
   .signup-button {
