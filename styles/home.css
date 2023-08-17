@@ -186,3 +186,35 @@ a {
 #footer {
   background-color: rgba(0, 148, 136, 0.13);
 }
+
+/* Mobile */
+@media (max-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+  /* Hero Section */
+  .hero-img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* NewsLetter */
+  .newsletter-img {
+    margin: 20px auto;
+  }
+
+  /* .modal-content {
+    width: 390px;
+    height: 390px;
+    margin: 0 20px;
+  } */
+
+  /* Podcast */
+  .podcast-row {
+    flex-direction: column;
+  }
+
+  .podcast-col2 {
+    width: 100%;
+  }
+}
