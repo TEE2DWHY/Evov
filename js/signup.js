@@ -45,8 +45,8 @@ signupForm.addEventListener("submit", async (e) => {
     clearInputFields();
   } catch (error) {
     // console.error(error.response.data.msg);
-    alert(error.response.data.msg);
     toggleLoadingState();
+    alert(error.response.data.msg);
   }
 });
 
