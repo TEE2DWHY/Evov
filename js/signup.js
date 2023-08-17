@@ -1,7 +1,7 @@
-// Globals
-const baseUrl = "https://evov.onrender.com";
+import { register } from "../config/urls.js";
+// Define components
 const modal = document.querySelector(".modal-container");
-const signupForm = document.querySelector("#signup");
+const form = document.querySelector("form");
 const buttonText = document.querySelector(".button-text");
 const spinner = document.querySelector(".loading");
 const closeButton = document.querySelector(".close");
@@ -37,7 +37,7 @@ const handleFormSubmit = async (e) => {
   };
 
   try {
-    const res = await axios.post(`${baseUrl}/api/v1/register`, formData);
+    const res = await axios.post(register, formData);
     console.log(res.data);
     toggleLoadingState();
     toggleModal();
@@ -49,8 +49,8 @@ const handleFormSubmit = async (e) => {
 };
 
 // Event listeners
-signupForm.addEventListener("submit", handleFormSubmit);
+form.addEventListener("submit", handleFormSubmit);
 closeButton.addEventListener("click", toggleModal);
-signupForm.addEventListener("focusin", () => {
+form.addEventListener("focusin", () => {
   err.innerHTML = "";
 });
