@@ -7,37 +7,35 @@ const spinner = document.querySelector(".loading");
 const closeButton = document.querySelector(".close");
 const err = document.querySelector(".err");
 
-// function to toggle loading state and button text
+// Function to toggle loading state and button text
 const toggleLoadingState = () => {
   buttonText.classList.toggle("hide-button-text");
   spinner.classList.toggle("show-loading");
 };
 
-// function to toggle Modal
+// Function to toggle Modal
 const toggleModal = () => {
   modal.classList.toggle("show-modal");
 };
 
-// function to clear input fields
+// Function to clear input fields
 const clearInputFields = () => {
   const inputFields = document.querySelectorAll("input");
   inputFields.forEach((input) => (input.value = ""));
 };
 
-//  Handle Sign up request
-signupForm.addEventListener("submit", async (e) => {
+// Function to handle form submission
+const handleFormSubmit = async (e) => {
   e.preventDefault();
-  const fullName = document.querySelector("#fullname").value;
-  const email = document.querySelector("#email").value;
-  const password = document.querySelector("#password").value;
-  const confirmPassword = document.querySelector("#confirm-password").value;
-  const formData = {
-    fullName: fullName,
-    email: email,
-    password: password,
-    confirmPassword: confirmPassword,
-  };
   toggleLoadingState();
+
+  const formData = {
+    fullName: document.querySelector("#fullname").value,
+    email: document.querySelector("#email").value,
+    password: document.querySelector("#password").value,
+    confirmPassword: document.querySelector("#confirm-password").value,
+  };
+
   try {
     const res = await axios.post(`${baseUrl}/api/v1/register`, formData);
     console.log(res.data);
@@ -47,11 +45,12 @@ signupForm.addEventListener("submit", async (e) => {
   } catch (error) {
     toggleLoadingState();
     err.innerHTML = error.response.data.msg;
-    setTimeout(() => {
-      err.innerHTML = "";
-    }, 3000);
   }
-});
+};
 
-// close modal
+// Event listeners
+signupForm.addEventListener("submit", handleFormSubmit);
 closeButton.addEventListener("click", toggleModal);
+signupForm.addEventListener("focusin", () => {
+  err.innerHTML = "";
+});
