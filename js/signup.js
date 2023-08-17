@@ -5,6 +5,7 @@ const signupForm = document.querySelector("#signup");
 const buttonText = document.querySelector(".button-text");
 const spinner = document.querySelector(".loading");
 const closeButton = document.querySelector(".close");
+const err = document.querySelector(".err");
 
 // function to toggle loading state and button text
 const toggleLoadingState = () => {
@@ -44,9 +45,11 @@ signupForm.addEventListener("submit", async (e) => {
     toggleModal();
     clearInputFields();
   } catch (error) {
-    // console.error(error.response.data.msg);
     toggleLoadingState();
-    alert(error.response.data.msg);
+    err.innerHTML = error.response.data.msg;
+    setTimeout(() => {
+      err.innerHTML = "";
+    }, 3000);
   }
 });
 
