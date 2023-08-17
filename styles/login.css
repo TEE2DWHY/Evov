@@ -115,7 +115,7 @@ input:focus {
 }
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   form {
     width: 100%;
     padding: 20px 60px;
