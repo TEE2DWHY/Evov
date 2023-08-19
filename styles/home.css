@@ -130,8 +130,15 @@ a {
   justify-content: center;
 }
 .newsletter-text {
-  font-weight: 900;
-  font-size: 45px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.stay-updated {
+  display: block;
+  margin: 20px 0;
+  font-style: italic;
+  font-weight: 600;
 }
 
 .newsletter-img {

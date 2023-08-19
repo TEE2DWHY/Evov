@@ -7,6 +7,10 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .email-img {
   display: block;
   margin: auto;
