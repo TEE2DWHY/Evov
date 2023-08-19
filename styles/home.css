@@ -92,7 +92,7 @@ a {
 .get-started {
   border: none;
   border-radius: 5px;
-  padding: 10px 30px;
+  padding: 12px 30px;
   background-color: #1b1b1b;
   color: #fff;
   margin-right: 5px;
@@ -100,12 +100,27 @@ a {
   font-weight: bold;
 }
 
+.get-started:hover {
+  background-color: #85e6c5;
+  color: #fff;
+  transition: all 2s ease-in;
+}
+
 .learn-more {
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  color: #1b1b1b;
+  color: #fff;
   margin-left: 10px;
+  background-color: #85e6c5;
+  border-radius: 5px;
+  padding: 15px 30px;
+}
+
+.learn-more:hover {
+  background-color: #1b1b1b;
+  color: #fff;
+  transition: all 2s ease-in;
 }
 
 .journey {
