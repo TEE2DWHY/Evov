@@ -1,4 +1,5 @@
 import { login } from "../config/urls.js";
+import { saveToken } from "../utils/storage.js";
 // Define components
 const form = document.querySelector("form");
 const spinner = document.querySelector(".loading");
@@ -17,6 +18,7 @@ const clearInput = () => {
   inputFields.forEach((input) => (input.value = ""));
 };
 
+// function to handle form submission
 const handleFormSubmit = async (e) => {
   e.preventDefault();
   toggleLoadingState();
@@ -27,7 +29,9 @@ const handleFormSubmit = async (e) => {
 
   try {
     const res = await axios.post(login, formData);
-    console.log(res.data);
+    const token = res.data.token;
+    saveToken(token);
+    window.location = "./dashboard.html";
     toggleLoadingState();
     clearInput();
   } catch (error) {

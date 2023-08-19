@@ -183,7 +183,9 @@ input:focus {
     }
 
     form {
+      margin-top: -30px;
       width: 100%;
+      padding: 10px 60px;
     }
   }
 }
