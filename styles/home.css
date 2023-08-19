@@ -80,6 +80,10 @@ a {
   font-size: 60px;
 }
 
+.evov {
+  color: #85e6c5;
+}
+
 .hero-paragraph {
   opacity: 0.6;
   font-size: 20px;
@@ -201,20 +205,20 @@ a {
   }
   /* Hero Section */
   .hero-img {
-    width: 100%;
+    width: 95%;
     object-fit: cover;
+  }
+
+  .hero-header {
+    font-size: 45px;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
   }
 
   /* NewsLetter */
   .newsletter-img {
     margin: 20px auto;
   }
-
-  /* .modal-content {
-    width: 390px;
-    height: 390px;
-    margin: 0 20px;
-  } */
 
   /* Podcast */
   .podcast-row {
