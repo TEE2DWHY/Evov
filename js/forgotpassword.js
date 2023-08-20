@@ -1,4 +1,4 @@
-import { resetPassword } from "../config/urls.js";
+import { forgotPassword } from "../config/urls.js";
 // Global
 const form = document.querySelector("form");
 const err = document.querySelector(".error");
@@ -17,23 +17,15 @@ const showModal = () => {
   modal.classList.toggle("show-modal");
 };
 
-// get token
-const url = window.location.href;
-console.log(url);
-// Get the token value from the "token" parameter
-const params = new URLSearchParams(url.search);
-const token = params.get("token");
-console.log(token);
 // Handle form submission
 const handleFormSubmit = async (e) => {
   e.preventDefault();
   toggleLoadingState();
   const formData = {
-    newPassword: document.querySelector("#newPassword").value,
-    confirmPassword: document.querySelector("#confirmPassword").value,
+    email: document.querySelector("#email").value,
   };
   try {
-    const res = await axios.post(`${resetPassword}/token=${token}`, formData);
+    const res = await axios.post(forgotPassword, formData);
     toggleLoadingState();
     showModal();
   } catch (error) {
