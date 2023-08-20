@@ -32,6 +32,7 @@ const handleFormSubmit = async (e) => {
   };
   try {
     const res = await axios.post(`${resetPassword}/token=${token}`, formData);
+    console.log(res.data);
     toggleLoadingState();
     showModal();
   } catch (error) {
