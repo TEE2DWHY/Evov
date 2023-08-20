@@ -18,8 +18,9 @@ const showModal = () => {
 };
 
 // get token
-const url = window.location;
+const url = window.location.href;
 const token = url.split("=")[1];
+console.log(token);
 
 // Handle form submission
 const handleFormSubmit = async (e) => {
