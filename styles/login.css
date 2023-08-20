@@ -57,6 +57,9 @@ input:focus {
 .forgot-password {
   margin: 30px 0;
   text-align: center;
+  color: #000;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 
 .login-button {
