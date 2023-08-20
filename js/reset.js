@@ -18,12 +18,9 @@ const showModal = () => {
 };
 
 // get token
-const url = window.location.href;
-console.log(url);
-// Get the token value from the "token" parameter
-const params = new URLSearchParams(url.search);
-const token = params.get("token");
-console.log(token);
+const url = window.location;
+const token = url.slice(50);
+
 // Handle form submission
 const handleFormSubmit = async (e) => {
   e.preventDefault();
