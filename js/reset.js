@@ -31,7 +31,7 @@ const handleFormSubmit = async (e) => {
     confirmPassword: document.querySelector("#confirmPassword").value,
   };
   try {
-    const res = await axios.post(`${resetPassword}/token=${token}`, formData);
+    const res = await axios.post(`${resetPassword}?token=${token}`, formData);
     console.log(res.data);
     toggleLoadingState();
     showModal();
