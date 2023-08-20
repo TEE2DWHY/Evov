@@ -10,6 +10,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 .home {
@@ -161,6 +162,11 @@ input:focus {
 .login {
   text-align: center;
   font-size: 14px;
+}
+
+.login-text {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 /* Mobile */
