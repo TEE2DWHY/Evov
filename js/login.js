@@ -41,6 +41,7 @@ const handleFormSubmit = async (e) => {
   }
 };
 
+// Event listeners
 form.addEventListener("submit", handleFormSubmit);
 form.addEventListener("focusin", () => {
   err.innerHTML = "";
